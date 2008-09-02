@@ -1,4 +1,3 @@
-
             
 class RegistrationController {
     def index = { redirect(action:list,params:params) }
@@ -71,7 +70,7 @@ class RegistrationController {
         def registration = new Registration()
         registration.properties = params
         if(registration.save()) {
-            flash.message = "${params.name} saved." 
+            flash.message = "${params.name} saved."
             redirect(action:show,id:registration.id)
         }
         else {

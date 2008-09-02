@@ -3,10 +3,10 @@ abstract class BaseController {
         if(!session.userId) { 
             def originalRequestParams = [controller:controllerName, action:actionName] 
             originalRequestParams.putAll(params) 
-            session.originalRequestParams = originalRequestParams
-            
+            session.originalRequestParams = originalRequestParams 
+
             redirect(controller:'user',action:'login') 
             return false 
         } 
     } 
-} 
+}

@@ -1,4 +1,4 @@
-
+  
 <html>
     <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -19,6 +19,7 @@
            <div class="dialog">
                  <table>
                    
+                   <tbody>
                    
                         <tr class="prop">
                               <td valign="top" class="name">Id:</td>
@@ -89,6 +90,7 @@
                               
                         </tr>
                    
+                   </tbody>
                  </table>
            </div>
            <div class="buttons">
@@ -101,4 +103,3 @@
         </div>
     </body>
 </html>
-            

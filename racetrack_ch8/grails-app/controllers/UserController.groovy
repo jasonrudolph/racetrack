@@ -1,4 +1,3 @@
-
             
 class UserController extends BaseController { 
     def beforeInterceptor = [action:this.&auth, except:['login', 'logout']] 
@@ -107,5 +106,5 @@ class UserController extends BaseController {
         session.userId = null 
         flash['message'] = 'Successfully logged out' 
         redirect(controller:'race', action:'search') 
-    } 
+    }
 }

@@ -1,9 +1,9 @@
-
+  
 <html>
     <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-         <g:javascript library="racetrack" />
-         <meta name="layout" content="main" />
+         <g:javascript library="racetrack" />          
+          <meta name="layout" content="main" />
          <title>Show Registration</title>
     </head>
     <body>
@@ -19,6 +19,8 @@
            </g:if>
            <div class="dialog">
                  <table>
+                   
+                   <tbody>
                         <tr class="prop">
                               <td valign="top" class="name">Name:</td>
                               
@@ -64,20 +66,20 @@
                         <tr class="prop">
                               <td valign="top" class="name">Created At:</td>
                               
-                                    <td valign="top" class="value">${registration.createdAt}</td>
+                                    <td valign="top" class="value"><g:formatDate date="${registration.createdAt}" format="yyyy-MMM-dd HH:mm"/></td>
                               
                         </tr>
                    
+                   </tbody>
                  </table>
            </div>
            <div class="buttons">
                <g:form controller="registration">
                  <input type="hidden" name="id" value="${registration?.id}" />
                  <span class="button"><g:actionSubmit value="Edit" /></span>
-                 <span class="button"><g:actionSubmit value="Delete" onclick="return warnBeforeRegistrationDelete();"/></span>
+                 <span class="button"><g:actionSubmit value="Delete" onclick="return warnBeforeRaceDelete();"/></span>
                </g:form>
            </div>
         </div>
     </body>
 </html>
-            

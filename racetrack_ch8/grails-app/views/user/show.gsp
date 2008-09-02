@@ -1,4 +1,4 @@
-
+  
 <html>
     <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -10,7 +10,6 @@
             <span class="menuButton"><a href="${createLinkTo(dir:'')}">Home</a></span>
             <span class="menuButton"><g:link action="list">User List</g:link></span>
             <span class="menuButton"><g:link action="create">New User</g:link></span>
-            <g:render template="/adminmenubar" />
         </div>
         <div class="body">
            <h1>Show User</h1>
@@ -20,6 +19,7 @@
            <div class="dialog">
                  <table>
                    
+                   <tbody>
                    
                         <tr class="prop">
                               <td valign="top" class="name">Id:</td>
@@ -42,6 +42,7 @@
                               
                         </tr>
                    
+                   </tbody>
                  </table>
            </div>
            <div class="buttons">
@@ -54,4 +55,3 @@
         </div>
     </body>
 </html>
-            

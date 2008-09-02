@@ -1,6 +1,5 @@
-
             
-class RegistrationController extends BaseController { 
+class RegistrationController extends BaseController {
     def beforeInterceptor = [action:this.&auth, except:'register'] 
     
     def index = { redirect(action:list,params:params) }
@@ -73,7 +72,7 @@ class RegistrationController extends BaseController {
         def registration = new Registration()
         registration.properties = params
         if(registration.save()) {
-            flash.message = "${params.name} saved." 
+            flash.message = "${params.name} saved."
             redirect(action:show,id:registration.id)
         }
         else {

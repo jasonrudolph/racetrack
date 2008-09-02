@@ -1,9 +1,9 @@
-
+  
 <html>
     <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-         <g:javascript library="racetrack" />
-         <meta name="layout" content="main" />
+         <g:javascript library="racetrack" />          
+          <meta name="layout" content="main" />
          <title>Show Race</title>
     </head>
     <body>
@@ -20,6 +20,9 @@
            </g:if>
            <div class="dialog">
                  <table>
+                   
+                   <tbody>
+                   
                         <tr class="prop">
                               <td valign="top" class="name">Name:</td>
                               
@@ -82,6 +85,7 @@
                               
                         </tr>
                    
+                   </tbody>
                  </table>
            </div>
            <div class="buttons">
@@ -94,4 +98,3 @@
         </div>
     </body>
 </html>
-            

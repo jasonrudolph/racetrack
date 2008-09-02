@@ -1,4 +1,4 @@
-
+  
 <html>
     <head>
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -18,6 +18,7 @@
                  </div>
             </g:if>
            <table>
+             <thead>
                <tr>
                    
                                       
@@ -35,31 +36,33 @@
                    
                    <th></th>
                </tr>
+             </thead>
+             <tbody>
                <g:each in="${registrationList}">
                     <tr>
                        
-                            <td>${it.id}</td>
+                            <td>${it.id?.encodeAsHTML()}</td>
                        
-                            <td>${it.name}</td>
+                            <td>${it.name?.encodeAsHTML()}</td>
                        
-                            <td>${it.dateOfBirth}</td>
+                            <td>${it.dateOfBirth?.encodeAsHTML()}</td>
                        
-                            <td>${it.gender}</td>
+                            <td>${it.gender?.encodeAsHTML()}</td>
                        
-                            <td>${it.postalAddress}</td>
+                            <td>${it.postalAddress?.encodeAsHTML()}</td>
                        
-                            <td>${it.emailAddress}</td>
+                            <td>${it.emailAddress?.encodeAsHTML()}</td>
                        
                        <td class="actionButtons">
                             <span class="actionButton"><g:link action="show" id="${it.id}">Show</g:link></span>
                        </td>
                     </tr>
                </g:each>
+             </tbody>
            </table>
-		   <div class="paginateButtons">
-				<g:paginate total="${Registration.count()}" />
-			</div>
+               <div class="paginateButtons">
+                   <g:paginate total="${Registration.count()}" />
+               </div>
         </div>
     </body>
 </html>
-            

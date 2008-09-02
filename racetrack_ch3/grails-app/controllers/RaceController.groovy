@@ -1,4 +1,3 @@
-
             
 class RaceController {
     def index = { redirect(action:list,params:params) }

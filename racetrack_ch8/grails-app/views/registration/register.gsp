@@ -5,10 +5,10 @@
     <title>Register</title> 
   </head> 
   <body> 
-  <div class="body"> 
       <div class="nav"> 
           <g:render template="/adminmenubar" /> 
       </div>
+      <div class="body"> 
       <h1>Register for ${race.name} </h1> 
       <em>Start Date: 
         <g:formatDate date="${race.startDateTime}" format="EEE, MMM d, yyyy"/> 
