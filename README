@@ -6,3 +6,14 @@ http://jasonrudolph.com
 This repository includes the complete source code for all the examples in the 
 book, "Getting Started with Grails", with each folder containing a snapshot of 
 the source as it exists at the end of a particular chapter.
+
+Use the repository's tags to access the sample application code associated with 
+a particular version of Grails.  You can currently access sample code built for 
+Grails 0.3.1, 0.4.2, and 0.5.  If you'd like a guaranteed smooth ride through the 
+book, you can find those versions of Grails here:
+
+http://dist.codehaus.org/grails/
+
+Also, please be sure to have a look at the FAQ:
+
+http://jasonrudolph.com/gswg_faq.html
