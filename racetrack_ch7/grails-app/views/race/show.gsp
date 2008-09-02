@@ -1,7 +1,7 @@
   
 <html>
     <head>
-         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>  
          <g:javascript library="racetrack" />          
           <meta name="layout" content="main" />
          <title>Show Race</title>

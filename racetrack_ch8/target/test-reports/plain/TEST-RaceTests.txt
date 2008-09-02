@@ -1,0 +1,20 @@
+Testsuite: RaceTests
+Tests run: 0, Failures: 0, Errors: 0, Time elapsed: 0 sec
+
+Testcase: testStartDateTimeCustomConstraintWithNullValue took 0.867 sec
+Testcase: testStartDateTimeCustomConstraintWithPastValue took 0.003 sec
+Testcase: testNameMaxConstraint took 0.002 sec
+Testcase: testNameNullConstraint took 0.002 sec
+Testcase: testNameBlankConstraint took 0.004 sec
+Testcase: testCityNullConstraint took 0.001 sec
+Testcase: testCityBlankConstraint took 0.002 sec
+Testcase: testCityMaxConstraint took 0.002 sec
+Testcase: testStateNullConstraint took 0.001 sec
+Testcase: testStateBlankConstraint took 0.002 sec
+Testcase: testStateInListConstraint took 0.001 sec
+Testcase: testDistanceNullConstraint took 0.001 sec
+Testcase: testDistanceMinConstraint took 0.003 sec
+Testcase: testDistanceMaxConstraint took 0.002 sec
+Testcase: testCostNullConstraint took 0.001 sec
+Testcase: testCostMinConstraint took 0.003 sec
+Testcase: testCostMaxConstraint took 0.001 sec

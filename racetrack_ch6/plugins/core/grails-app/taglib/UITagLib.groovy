@@ -152,7 +152,7 @@ class UITagLib {
 	 * <g:richTextEditor name="editor" height="400" />
 	 */
 	def richTextEditor = { attrs ->
-		withTag(name:'script',attributes:[type:'text/javascript']) {
+		out << withTag(name:'script',attributes:[type:'text/javascript']) {
 			if(attrs.onComplete) {
 				out.println "function FCKeditor_OnComplete( editorInstance ) {"
 					out.println "${attrs.onComplete}(editorInstance);"					
@@ -162,24 +162,53 @@ class UITagLib {
 			var oFCKeditor = new FCKeditor( '${attrs.name}' ) ;
 			oFCKeditor.BasePath	 = \""""
 			if(attrs.basepath) {
-				createLinkTo(dir:attrs.basepath)
+				out << createLinkTo(dir:attrs.basepath)
 			}
 			else {
-				createLinkTo(dir:"fckeditor/")
+			    out << createLinkTo(dir:"fckeditor/")
 			}
 			out.println '";'
 			if(attrs.toolbar) {
 				out << "oFCKeditor.ToolbarSet	 = '${attrs.toolbar}';" 	
-			}			
+			}
+			// add width support
+			if(attrs.width)			
+				out.println "oFCKeditor.Width	= '${attrs.width}';"
+			
 			if(attrs.height)			
-				out.println "oFCKeditor.Height	= ${attrs.height};"
+				out.println "oFCKeditor.Height	= '${attrs.height}';"
+			
+			// add skin support, values to choose: "default", "office2003", "silver"
+			if(attrs.skin)
+				out.println "oFCKeditor.Config['SkinPath'] = 'skins/${attrs.skin}/';"
+			
+			// check the browser compatibility when rendering the editor.  default value: true, values to choose: true, false, 
+			if(attrs.checkBrowser)
+				out.println "oFCKeditor.CheckBrowser = ${attrs.checkBrowser};"
+
+			// show error messages on errors while rendering the editor.   default value: true, values to choose: true, false
+			if(attrs.displayErrors)
+				out.println "oFCKeditor.DisplayErrors = ${attrs.displayErrors};"
+
+			// oFCKeditor.Config      AutoDetectLanguage:true/false, DefaultLanguage:'pt-BR' and so on
+			if(attrs.config) {
+				if (attrs.config instanceof Map) {
+					attrs.config.each { k, v ->
+						out.println "oFCKeditor.Config['$k'] = '$v';"
+					}
+				} else {
+					throw new Exception("""The format of config is not correct, it should be like "[AutoDetectLanguage:false, DefaultLanguage:'pt-BR']"   """)
+				}
+			}
+
 			if(attrs.value) {
 				out << "oFCKeditor.Value	= \""
-				escapeJavascript(Collections.EMPTY_MAP,attrs.value)
+			    out << escapeJavascript(Collections.EMPTY_MAP,attrs.value)
 				out.println "\" ;"
 			}
 			
-			out.println "oFCKeditor.Create();"			
+			out.println "oFCKeditor.Create();"	
+
 		}
 	}
 }

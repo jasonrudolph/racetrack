@@ -1,6 +1,6 @@
             
-class RegistrationController extends BaseController {
-    def beforeInterceptor = [action:this.&auth, except:'register'] 
+class RegistrationController extends BaseController { 
+    def beforeInterceptor = [action:this.&auth, except:'register']
     
     def index = { redirect(action:list,params:params) }
 
@@ -49,7 +49,7 @@ class RegistrationController extends BaseController {
         if(registration) {
              registration.properties = params
             if(registration.save()) {
-                flash.message = "${params.name} updated."
+                flash.message = "${params.name} updated."                 
                 redirect(action:show,id:registration.id)
             }
             else {
@@ -72,13 +72,14 @@ class RegistrationController extends BaseController {
         def registration = new Registration()
         registration.properties = params
         if(registration.save()) {
-            flash.message = "${params.name} saved."
+            flash.message = "${params.name} saved."                 
             redirect(action:show,id:registration.id)
         }
         else {
             render(view:'create',model:[registration:registration])
         }
     }
+
 
     def register = { 
         def registration = new Registration() 
@@ -90,8 +91,7 @@ class RegistrationController extends BaseController {
         } 
         else { 
             if(registration.save()) { 
-                flash.message =  
-                    "Successfully registered for ${registration.race.name}" 
+                flash.message = "Successfully registered for ${registration.race.name}" 
                 redirect(controller:'race',action:'search') 
             } 
             else { 
@@ -99,5 +99,5 @@ class RegistrationController extends BaseController {
                 return ['registration':registration,'race':race] 
             } 
         } 
-    } 
+    }  
 }

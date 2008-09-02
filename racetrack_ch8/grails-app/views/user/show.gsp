@@ -10,6 +10,7 @@
             <span class="menuButton"><a href="${createLinkTo(dir:'')}">Home</a></span>
             <span class="menuButton"><g:link action="list">User List</g:link></span>
             <span class="menuButton"><g:link action="create">New User</g:link></span>
+            <g:render template="/adminmenubar" />
         </div>
         <div class="body">
            <h1>Show User</h1>

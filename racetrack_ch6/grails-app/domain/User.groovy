@@ -3,7 +3,7 @@ class User {
     String password 
  
     static constraints = { 
-        userId(length:6..8,unique:true) 
-        password(length:6..8) 
+        userId(size:6..8,unique:true) 
+        password(size:6..8) 
     } 
 }

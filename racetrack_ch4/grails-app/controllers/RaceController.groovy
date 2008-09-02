@@ -46,8 +46,8 @@ class RaceController {
         def race = Race.get( params.id )
         if(race) {
              race.properties = params
-            if(race.save()) {
-                flash.message = "${params.name} updated."
+            if(race.save()) {       
+                flash.message = "${params.name} updated."                 
                 redirect(action:show,id:race.id)
             }
             else {
@@ -70,7 +70,7 @@ class RaceController {
         def race = new Race()
         race.properties = params
         if(race.save()) {
-            flash.message = "${params.name} saved."
+            flash.message = "${params.name} saved." 
             redirect(action:show,id:race.id)
         }
         else {

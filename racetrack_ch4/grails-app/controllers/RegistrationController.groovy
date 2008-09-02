@@ -47,7 +47,7 @@ class RegistrationController {
         if(registration) {
              registration.properties = params
             if(registration.save()) {
-                flash.message = "${params.name} updated."
+                flash.message = "${params.name} updated."                 
                 redirect(action:show,id:registration.id)
             }
             else {
@@ -70,7 +70,7 @@ class RegistrationController {
         def registration = new Registration()
         registration.properties = params
         if(registration.save()) {
-            flash.message = "${params.name} saved."
+            flash.message = "${params.name} saved."                 
             redirect(action:show,id:registration.id)
         }
         else {

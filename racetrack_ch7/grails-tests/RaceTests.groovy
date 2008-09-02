@@ -18,7 +18,7 @@ class RaceTests extends GroovyTestCase {
         def race = getValidRace() 
         race.name = 'It may very well take longer to type out the name of ' + 
             'this race than to just go run it.' 
-        assertValidationError(race, 'name', 'race.name.maxLength.exceeded') 
+        assertValidationError(race, 'name', 'race.name.maxSize.exceeded') 
     } 
      
     void testNameNullConstraint() {
@@ -48,7 +48,7 @@ class RaceTests extends GroovyTestCase {
     void testCityMaxConstraint() {
         def race = getValidRace()
         race.city = 'I pity the fool that lives in a city with a name this long.'
-        assertValidationError(race, 'city', 'race.city.maxLength.exceeded')
+        assertValidationError(race, 'city', 'race.city.maxSize.exceeded')
     }
 
     void testStateNullConstraint() {
@@ -84,7 +84,7 @@ class RaceTests extends GroovyTestCase {
     void testDistanceMaxConstraint() {
         def race = getValidRace()
         race.distance = 100.0001
-        assertValidationError(race, 'distance', 'race.distance.max.exceeded') // TODO Explain where to find the list of error codes - the validation reference page
+        assertValidationError(race, 'distance', 'race.distance.max.exceeded')
     }
 
     void testCostNullConstraint() {

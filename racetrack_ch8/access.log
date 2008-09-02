@@ -1,2 +1,2 @@
-2007-03-11 21:30:49,103 WARN  [UserController] Shields up!  Somebody's trying to hack through our rock-solid DEFCON 1 security -- User ID - admin, Password - 
+2007-05-19 16:47:28,583 WARN  [grails.app.controller.UserController] Shields up!  Somebody's trying to hack through our rock-solid DEFCON 1 security -- User ID - adminjoe, Password - letmein
  

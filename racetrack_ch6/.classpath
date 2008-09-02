@@ -10,7 +10,9 @@
 	<classpathentry kind="src" path="grails-tests"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="var" path="GRAILS_HOME/ant/lib/ant.jar"/>
-    <classpathentry kind="var" path="GRAILS_HOME/lib/ant-nodeps.jar" />
+    <classpathentry kind="var" path="GRAILS_HOME/lib/ant-junit.jar" />
+
+<classpathentry kind="var" path="GRAILS_HOME/lib/ant-nodeps.jar" />
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/ant.jar" />
 
@@ -48,9 +50,9 @@
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/ejb3-persistence.jar" />
 
-<classpathentry kind="var" path="GRAILS_HOME/lib/gant-0.2.2-SNAPSHOT.jar" />
+<classpathentry kind="var" path="GRAILS_HOME/lib/gant-0.2.5-SNAPSHOT.jar" />
 
-<classpathentry kind="var" path="GRAILS_HOME/lib/groovy-all-1.0.1-SNAPSHOT.jar" />
+<classpathentry kind="var" path="GRAILS_HOME/lib/groovy-all-1.1-BETA-1.jar" />
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/groovy-starter.jar" />
 
@@ -80,13 +82,13 @@
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/log4j-1.2.8.jar" />
 
-<classpathentry kind="var" path="GRAILS_HOME/lib/ognl-2.7.jar" />
-
 <classpathentry kind="var" path="GRAILS_HOME/lib/org.mortbay.jetty.jar" />
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/oro-2.0.8.jar" />
 
-<classpathentry kind="var" path="GRAILS_HOME/lib/quartz-1.5.2.jar" />
+<classpathentry kind="var" path="GRAILS_HOME/lib/quartz-1.6.0.jar" />
+
+<classpathentry kind="var" path="GRAILS_HOME/lib/serializer.jar" />
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/servletapi-2.4.jar" />
 
@@ -106,18 +108,20 @@
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/standard-2.4.jar" />
 
+<classpathentry kind="var" path="GRAILS_HOME/lib/xalan.jar" />
+
 <classpathentry kind="var" path="GRAILS_HOME/lib/xerces-2.6.2.jar" />
 
 <classpathentry kind="var" path="GRAILS_HOME/lib/xml-apis.jar" />
 
 
-	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-core-0.4.2.jar" />
+	<classpathentry kind="var" path="GRAILS_HOME/dist/grails-core-0.5.jar" />
 
-<classpathentry kind="var" path="GRAILS_HOME/dist/grails-crud-0.4.2.jar" />
+<classpathentry kind="var" path="GRAILS_HOME/dist/grails-crud-0.5.jar" />
 
-<classpathentry kind="var" path="GRAILS_HOME/dist/grails-gorm-0.4.2.jar" />
+<classpathentry kind="var" path="GRAILS_HOME/dist/grails-gorm-0.5.jar" />
 
-<classpathentry kind="var" path="GRAILS_HOME/dist/grails-web-0.4.2.jar" />
+<classpathentry kind="var" path="GRAILS_HOME/dist/grails-web-0.5.jar" />
 
 
 	<classpathentry kind="output" path="web-app/WEB-INF/classes"/>

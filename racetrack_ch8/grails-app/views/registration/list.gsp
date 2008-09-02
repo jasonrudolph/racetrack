@@ -21,17 +21,17 @@
            <table>
              <thead>
                <tr>
-                        <th>Name</th>
-                                      
-                        <th>Date Of Birth</th>
-                                      
-                        <th>Gender</th>
-                                      
-                        <th>Postal Address</th>
-                                      
-                        <th>Email Address</th>
-                   
-                   <th></th>
+                   	    <g:sortableColumn property="name" title="Name" />
+                  
+                   	    <g:sortableColumn property="dateOfBirth" title="Date Of Birth" />
+                  
+                   	    <g:sortableColumn property="gender" title="Gender" />
+                  
+                   	    <g:sortableColumn property="postalAddress" title="Postal Address" />
+                  
+                   	    <g:sortableColumn property="emailAddress" title="Email Address" />
+                  
+                        <th></th>
                </tr>
              </thead>
              <tbody>

@@ -1,7 +1,7 @@
             
 class UserController extends BaseController { 
     def beforeInterceptor = [action:this.&auth, except:['login', 'logout']] 
-    
+
     def index = { redirect(action:list,params:params) }
 
     // the delete, save and update actions only

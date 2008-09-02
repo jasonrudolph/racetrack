@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" name="RaceTests" tests="0" time="0.0">
+  <properties></properties>
+  <testcase classname="RaceTests" name="testStartDateTimeCustomConstraintWithNullValue" time="0.867"></testcase>
+  <testcase classname="RaceTests" name="testStartDateTimeCustomConstraintWithPastValue" time="0.0030"></testcase>
+  <testcase classname="RaceTests" name="testNameMaxConstraint" time="0.0020"></testcase>
+  <testcase classname="RaceTests" name="testNameNullConstraint" time="0.0020"></testcase>
+  <testcase classname="RaceTests" name="testNameBlankConstraint" time="0.0040"></testcase>
+  <testcase classname="RaceTests" name="testCityNullConstraint" time="0.0010"></testcase>
+  <testcase classname="RaceTests" name="testCityBlankConstraint" time="0.0020"></testcase>
+  <testcase classname="RaceTests" name="testCityMaxConstraint" time="0.0020"></testcase>
+  <testcase classname="RaceTests" name="testStateNullConstraint" time="0.0010"></testcase>
+  <testcase classname="RaceTests" name="testStateBlankConstraint" time="0.0020"></testcase>
+  <testcase classname="RaceTests" name="testStateInListConstraint" time="0.0010"></testcase>
+  <testcase classname="RaceTests" name="testDistanceNullConstraint" time="0.0010"></testcase>
+  <testcase classname="RaceTests" name="testDistanceMinConstraint" time="0.0030"></testcase>
+  <testcase classname="RaceTests" name="testDistanceMaxConstraint" time="0.0020"></testcase>
+  <testcase classname="RaceTests" name="testCostNullConstraint" time="0.0010"></testcase>
+  <testcase classname="RaceTests" name="testCostMinConstraint" time="0.0030"></testcase>
+  <testcase classname="RaceTests" name="testCostMaxConstraint" time="0.0010"></testcase>
+</testsuite>

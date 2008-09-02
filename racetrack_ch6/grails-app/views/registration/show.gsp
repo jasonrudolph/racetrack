@@ -78,7 +78,7 @@
                <g:form controller="registration">
                  <input type="hidden" name="id" value="${registration?.id}" />
                  <span class="button"><g:actionSubmit value="Edit" /></span>
-                 <span class="button"><g:actionSubmit value="Delete" onclick="return warnBeforeRaceDelete();"/></span>
+                 <span class="button"><g:actionSubmit value="Delete" onclick="return warnBeforeRegistrationDelete();" /></span>
                </g:form>
            </div>
         </div>

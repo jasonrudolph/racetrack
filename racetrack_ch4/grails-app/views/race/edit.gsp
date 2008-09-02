@@ -30,19 +30,19 @@
 
                        
                        
-				<tr class='prop'><td valign='top' class='name'><label for='name'>Name:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'name','errors')}'><input type="text" maxlength='50' name='name' value="${race?.name?.encodeAsHTML()}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='name'>Name:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'name','errors')}'><input type="text" maxlength='50' name='name' value="${race?.name?.encodeAsHTML()}"/></td></tr>
                        
 				<tr class='prop'><td valign='top' class='name'><label for='startDateTime'>Start Date Time:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'startDateTime','errors')}'><g:datePicker name='startDateTime' value="${race?.startDateTime}"></g:datePicker></td></tr>
                        
-				<tr class='prop'><td valign='top' class='name'><label for='city'>City:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'city','errors')}'><input type="text" maxlength='30' name='city' value="${race?.city?.encodeAsHTML()}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='city'>City:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'city','errors')}'><input type="text" maxlength='30' name='city' value="${race?.city?.encodeAsHTML()}"/></td></tr>
                        
 				<tr class='prop'><td valign='top' class='name'><label for='state'>State:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'state','errors')}'><g:select name='state' from='${race.constraints.state.inList.collect{it.encodeAsHTML()}}' value="${race.state?.encodeAsHTML()}"></g:select></td></tr>
                        
-				<tr class='prop'><td valign='top' class='name'><label for='distance'>Distance (mi):</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'distance','errors')}'><input type='text' name='distance' value="${race?.distance}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='distance'>Distance (mi):</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'distance','errors')}'><input type='text' name='distance' value="${race?.distance}" /></td></tr>
                        
-				<tr class='prop'><td valign='top' class='name'><label for='cost'>Cost (US$):</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'cost','errors')}'><input type='text' name='cost' value="${race?.cost}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='cost'>Cost (US$):</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'cost','errors')}'><input type='text' name='cost' value="${race?.cost}" /></td></tr>
                        
-				<tr class='prop'><td valign='top' class='name'><label for='maxRunners'>Max Runners:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'maxRunners','errors')}'><input type='text' name='maxRunners' value="${race?.maxRunners}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='maxRunners'>Max Runners:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'maxRunners','errors')}'><input type='text' name='maxRunners' value="${race?.maxRunners}" /></td></tr>
                        
 				<tr class='prop'><td valign='top' class='name'><label for='registrations'>Registrations:</label></td><td valign='top' class='value ${hasErrors(bean:race,field:'registrations','errors')}'><ul>
     <g:each var='r' in='${race?.registrations?}'>

@@ -10,7 +10,7 @@
             <span class="menuButton"><a href="${createLinkTo(dir:'')}">Home</a></span>
             <span class="menuButton"><g:link action="create">New Race</g:link></span>
             <span class="menuButton"> 
-                <g:link action="search">Search for Races</g:link> 
+                    <g:link action="search">Search for Races</g:link> 
             </span> 
         </div>
         <div class="body">
@@ -23,17 +23,17 @@
            <table>
              <thead>
                <tr>
-                        <th>Name</th>
-                                      
-                        <th>Start Date Time</th>
-                                      
-                        <th>City</th>
-                                      
-                        <th>State</th>
-                                      
-                        <th>Distance</th>
-                   
-                   <th></th>
+                   	    <g:sortableColumn property="name" title="Name" />
+                  
+                   	    <g:sortableColumn property="startDateTime" title="Start Date Time" />
+                  
+                   	    <g:sortableColumn property="city" title="City" />
+                  
+                   	    <g:sortableColumn property="state" title="State" />
+                  
+                   	    <g:sortableColumn property="distance" title="Distance" />
+                  
+                        <th></th>
                </tr>
              </thead>
              <tbody>

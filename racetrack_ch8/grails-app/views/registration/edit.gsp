@@ -31,7 +31,7 @@
 
                        
                        
-				<tr class='prop'><td valign='top' class='name'><label for='name'>Name:</label></td><td valign='top' class='value ${hasErrors(bean:registration,field:'name','errors')}'><input type="text" maxlength='50' name='name' value="${registration?.name?.encodeAsHTML()}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='name'>Name:</label></td><td valign='top' class='value ${hasErrors(bean:registration,field:'name','errors')}'><input type="text" maxlength='50' name='name' value="${registration?.name?.encodeAsHTML()}"/></td></tr>
                        
 				<tr class='prop'><td valign='top' class='name'><label for='dateOfBirth'>Date Of Birth:</label></td><td valign='top' class='value ${hasErrors(bean:registration,field:'dateOfBirth','errors')}'><g:datePicker name='dateOfBirth' value="${registration?.dateOfBirth}" precision='day'></g:datePicker></td></tr>
                        
@@ -39,7 +39,7 @@
                        
 				<tr class='prop'><td valign='top' class='name'><label for='postalAddress'>Postal Address:</label></td><td valign='top' class='value ${hasErrors(bean:registration,field:'postalAddress','errors')}'><textarea rows='5' cols='40' name='postalAddress'>${registration?.postalAddress?.encodeAsHTML()}</textarea></td></tr>
                        
-				<tr class='prop'><td valign='top' class='name'><label for='emailAddress'>Email Address:</label></td><td valign='top' class='value ${hasErrors(bean:registration,field:'emailAddress','errors')}'><input type="text" maxlength='50' name='emailAddress' value="${registration?.emailAddress?.encodeAsHTML()}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='emailAddress'>Email Address:</label></td><td valign='top' class='value ${hasErrors(bean:registration,field:'emailAddress','errors')}'><input type="text" maxlength='50' name='emailAddress' value="${registration?.emailAddress?.encodeAsHTML()}"/></td></tr>
                        
 				<tr class='prop'><td valign='top' class='name'><label for='race'>Race:</label></td><td valign='top' class='value ${hasErrors(bean:registration,field:'race','errors')}'><g:select optionKey="id" from="${Race.list()}" name='race.id' value="${registration?.race?.id}"></g:select></td></tr>
                        
@@ -51,7 +51,7 @@
 
                <div class="buttons">
                      <span class="button"><g:actionSubmit value="Update" /></span>
-                     <span class="button"><g:actionSubmit value="Delete" onclick="return warnBeforeRaceDelete();"/></span>
+                     <span class="button"><g:actionSubmit value="Delete" onclick="return warnBeforeRegistrationDelete();" /></span>
                </div>
             </g:form>
         </div>

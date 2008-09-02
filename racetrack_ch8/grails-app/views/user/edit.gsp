@@ -10,6 +10,7 @@
             <span class="menuButton"><a href="${createLinkTo(dir:'')}">Home</a></span>
             <span class="menuButton"><g:link action="list">User List</g:link></span>
             <span class="menuButton"><g:link action="create">New User</g:link></span>
+             <g:render template="/adminmenubar" />
         </div>
         <div class="body">
            <h1>Edit User</h1>
@@ -33,9 +34,9 @@
 
                        
                        
-				<tr class='prop'><td valign='top' class='name'><label for='userId'>User Id:</label></td><td valign='top' class='value ${hasErrors(bean:user,field:'userId','errors')}'><input type="text" maxlength='8' name='userId' value="${user?.userId?.encodeAsHTML()}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='userId'>User Id:</label></td><td valign='top' class='value ${hasErrors(bean:user,field:'userId','errors')}'><input type="text" maxlength='8' name='userId' value="${user?.userId?.encodeAsHTML()}"/></td></tr>
                        
-				<tr class='prop'><td valign='top' class='name'><label for='password'>Password:</label></td><td valign='top' class='value ${hasErrors(bean:user,field:'password','errors')}'><input type="text" maxlength='8' name='password' value="${user?.password?.encodeAsHTML()}"></input></td></tr>
+				<tr class='prop'><td valign='top' class='name'><label for='password'>Password:</label></td><td valign='top' class='value ${hasErrors(bean:user,field:'password','errors')}'><input type="text" maxlength='8' name='password' value="${user?.password?.encodeAsHTML()}"/></td></tr>
                        
                     </tbody>
                 </table>

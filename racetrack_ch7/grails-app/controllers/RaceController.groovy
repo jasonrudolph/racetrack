@@ -1,6 +1,6 @@
             
-class RaceController extends BaseController {
-    def beforeInterceptor = [action:this.&auth, except:['search']] 
+class RaceController extends BaseController { 
+    def beforeInterceptor = [action:this.&auth, except:['search']]
     
     def index = { redirect(action:list,params:params) }
 
@@ -48,8 +48,8 @@ class RaceController extends BaseController {
         def race = Race.get( params.id )
         if(race) {
              race.properties = params
-            if(race.save()) {
-                flash.message = "${params.name} updated."
+            if(race.save()) {       
+                flash.message = "${params.name} updated."                 
                 redirect(action:show,id:race.id)
             }
             else {
@@ -72,7 +72,7 @@ class RaceController extends BaseController {
         def race = new Race()
         race.properties = params
         if(race.save()) {
-            flash.message = "${params.name} saved."
+            flash.message = "${params.name} saved." 
             redirect(action:show,id:race.id)
         }
         else {
@@ -80,42 +80,41 @@ class RaceController extends BaseController {
         }
     }
 
-    def search = { 
-        if (request.method == 'POST') { 
-            RaceQuery query = new RaceQuery() 
-            bindData(query, params) 
-
-            def criteria = Race.createCriteria() 
-
-            def results = criteria { 
-                and { 
-                    like('city', '%' + query.city + '%') 
-                    like('state', '%' + query.state + '%') 
-                    if (query.distance) { 
-                        switch (query.distanceOperator) { 
-                            case RaceQuery.DistanceOperator.AT_LEAST: 
-                                ge('distance', query.distance) 
-                                break 
-                            case RaceQuery.DistanceOperator.EXACTLY: 
-                                eq('distance', query.distance) 
-                                break 
-                            case RaceQuery.DistanceOperator.AT_MOST: 
-                                le('distance', query.distance) 
-                                break 
-                            default: 
-                                log.error "Found unexpected value for distance" 
-                                   + " operator - ${query.distanceOperator}" 
-                        } 
-                    } 
-                    // Add 1 day (24 hours) to the max date.  (If user selects a max 
-                    // date of Jan 1st, the date object will hold Jan 1st 00:00, but 
-                    // the user will want any events occurring thru Jan 1st 23:59.) 
-                    between('startDateTime', query.minDate, query.maxDate + 1) 
-                } 
-            } 
-
-            render(view:'searchresults', model:[ raceList: results ])  
-        } 
-    } 
-
+    def search = {
+        if (request.method == 'POST') {
+            RaceQuery query = new RaceQuery()
+            bindData(query, params)
+    
+            def criteria = Race.createCriteria()
+    
+            def results = criteria {
+                and {
+                    like('city', '%' + query.city + '%')
+                    like('state', '%' + query.state + '%')
+                    if (query.distance) {
+                        switch (query.distanceOperator) {
+                            case RaceQuery.DistanceOperator.AT_LEAST:
+                                ge('distance', query.distance)
+                                break
+                            case RaceQuery.DistanceOperator.EXACTLY:
+                                eq('distance', query.distance)
+                                break
+                            case RaceQuery.DistanceOperator.AT_MOST:
+                                le('distance', query.distance)
+                                break
+                            default:
+                                log.error "Found unexpected value for distance"
+                                    + " operator - ${query.distanceOperator}"
+                        }
+                    }
+                    // Add 1 day (24 hours) to the max date.  If user selects a max
+                    // date of Jan 1st, the date object will hold Jan 1st 00:00, but
+                    // the user will want any events occurring thru Jan 1st 23:59.
+                    between('startDateTime', query.minDate, query.maxDate + 1)
+                }
+            }
+    
+            render(view:'searchresults', model:[ raceList: results.adaptee ])
+        }
+    }
 }
