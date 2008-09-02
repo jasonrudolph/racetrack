@@ -1,0 +1,268 @@
+.logo {
+    background: url(../images/banner.jpg) no-repeat;
+    width: 808px;
+    height: 100px;
+    border: 0;
+    margin: 5px 5px 5px 5px;
+    padding: 0;
+}
+
+.menuButton {
+    width: 96%;
+    height: 15px;
+    color: #ffffff;
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+
+h1 {
+    color: #265624;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 36px;
+    text-decoration: none;
+    margin: 10px 5px 0px 5px;
+}
+
+h2 {
+    color: #993333;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 26px;
+    text-decoration: none;
+    margin-left: 9px;
+}
+
+body {
+    backgorund-position: left top;
+    background: #56687e url(images/bg.gif) top center repeat-y;
+}
+
+.body {
+    width: auto;
+    margin: 5px 5px 5px 5px;
+}
+
+.nav {
+    color: #265624;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    text-align: right;
+    border-bottom: solid;
+}
+
+.nav a:link {
+    color: #006970;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-right: 15px;
+    text-decoration: underline;
+}
+
+.nav a:visited {
+    color: #5e715f;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-right: 15px;
+    text-decoration: underline;
+}
+
+.nav a:hover {
+    color: #993333;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    margin-top: 5px;
+    margin-right: 15px;
+    text-decoration: underline;
+}
+
+th {
+    color: #265624;
+    padding: 5px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+}
+
+.dialog {
+    width: 98.5%;
+    background-color: #dfe2df;
+    padding: 5px 5px 25px 5px;
+    background-image: url(../images/transrace.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.dialog label {
+    width: 120px;
+    font-weight: bold;
+}
+
+.dialog .textfield,.textarea {
+    width: 180px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.prop {
+    padding: 5px;
+}
+
+.buttons {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+div .errors {
+    border: 2px solid red;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    border: 1px solid #993333;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.prop .name {
+    color: #265624;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    padding-right: 24px;
+}
+
+.prop .value {
+    color: #000000;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    text-decoration: none
+}
+
+.contentArea {
+    background-color: #ffffff;
+    width: 808px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentArea TD {
+    font-weight: normal;
+    font-size: 8pt;
+    color: #818181;
+    font-family: Verdana, Helvetica, Arial;
+    text-decoration: none;
+}
+
+.contentArea A:link {
+    font-weight: normal;
+    font-size: 8pt;
+    color: #333333;
+    font-family: Verdana, Helvetica, Arial;
+    text-decoration: none;
+}
+
+.contentArea A:active {
+    font-weight: normal;
+    font-size: 8pt;
+    color: #333333;
+    font-family: Verdana, Helvetica, Arial;
+    text-decoration: none;
+}
+
+.contentArea A:visited {
+    font-weight: normal;
+    font-size: 8pt;
+    color: #333333;
+    font-family: Verdana, Helvetica, Arial;
+    text-decoration: none;
+}
+
+.contentArea A:hover {
+    font-weight: normal;
+    font-size: 8pt;
+    color: #333333;
+    font-family: Verdana, Helvetica, Arial;
+    text-decoration: none
+}
+
+em {
+    font-style: normal;
+    color: #993333;
+    font-size: 18px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 32px;
+    text-decoration: none;
+    margin-left: 9px;
+}
+
+.lineItemValue {
+    color: #993333;
+    padding: 5px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 31px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text {
+    color: #21577e;
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    text-decoration: none
+}
+
+.numericData {
+    text-align: right;
+}
+
+.formbutton {
+    cursor: pointer;
+    border: outset 1px #ccc;
+    background: #999;
+    color: #666;
+    font-weight: bold;
+    padding: 1px 2px;
+    background: url(../images/formbg.gif) repeat-x left top;
+    margin: 10px 0px 5px 5px;
+}
+
+strong {
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.actionButtons {
+    width:100px;
+    font-weight: bold;
+}
+
+.actionButton a:active,.actionButton a:link,.actionButton a:visited,.actionButton a:hover {
+    padding: 5px;
+    line-height: 31px;
+    text-decoration: underline;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #265624;
+}
